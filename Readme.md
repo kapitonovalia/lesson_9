@@ -18,4 +18,4 @@
 | ------------- | ------------- | ------------- | ------------- |
 | 1  | delete order with correct a valid order ID|204 |204|Passed|
 | 2  | delete order with incorrect order ID|400|400|Passed|
-| 2  | delete order with empty api_key|401|401|Passed| 
+| 3  | delete order with empty api_key|401|401|Passed| 
