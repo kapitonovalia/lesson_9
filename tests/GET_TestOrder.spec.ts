@@ -13,7 +13,7 @@ test('get order with correct request should receive code 200', async ({ request 
   console.log('response body:', await response.json())
   console.log("response status:", response.status());
   expect(response.status()).toBe(StatusCodes.OK)
-})
+});
 
 test('get order with incorrect request (skip password) and should receive code 500 ', async ({ request }) => {
   const requestParameters = {
@@ -25,7 +25,7 @@ test('get order with incorrect request (skip password) and should receive code 5
   console.log('response headers:', response.headers())
   console.log("response status:", response.status());
   expect(response.status()).toBe(StatusCodes.INTERNAL_SERVER_ERROR)
-})
+});
 
 test('get order with correct request and wrong url should receive code 401 ', async ({ request }) => {
   const requestParameters = {
@@ -37,4 +37,4 @@ test('get order with correct request and wrong url should receive code 401 ', as
   })
   console.log("response status:", response.status());
   expect(response.status()).toBe(401)
-})
+});

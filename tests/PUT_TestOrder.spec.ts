@@ -21,8 +21,8 @@ test('update order with correct request should receive code 200 ', async ({ requ
   //console.log('response body:', await response.json());
   console.log("response status:", response.status());
   expect(response.status()).toBe(StatusCodes.OK)
+});
 
-})
 test('update order with empty api_key should receive code 401 ', async ({ request }) => {
   const requestHeader= {
     api_key :"",
@@ -42,7 +42,7 @@ test('update order with empty api_key should receive code 401 ', async ({ reques
   })
   console.log("response status:", response.status());
   expect(response.status()).toBe(StatusCodes.UNAUTHORIZED)
-})
+});
 
 test('update order with incorrect id should receive code 400 ', async ({ request }) => {
   const requestHeader= {
@@ -65,4 +65,4 @@ test('update order with incorrect id should receive code 400 ', async ({ request
   console.log("response headers: ", response.headers());
   console.log('response body:', await response.json());
   expect(response.status()).toBe(StatusCodes.BAD_REQUEST)
-})
+});
