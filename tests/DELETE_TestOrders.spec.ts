@@ -35,4 +35,4 @@ test('delete order with empty api_key should receive code 401', async ({ request
   console.log('response status:', await response.status())
   console.log('response headers:', response.headers())
   expect(response.status()).toBe(401)
-});
+})

@@ -65,4 +65,4 @@ test('update order with incorrect id should receive code 400 ', async ({ request
   console.log("response headers: ", response.headers());
   console.log('response body:', await response.json());
   expect(response.status()).toBe(StatusCodes.BAD_REQUEST)
-});
+})
