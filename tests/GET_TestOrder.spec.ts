@@ -11,11 +11,13 @@ test('get order with correct request should receive code 200', async ({ request 
     params: requestParameters,
   })
   console.log('response body:', await response.json())
-  console.log("response status:", response.status());
+  console.log('response status:', response.status())
   expect(response.status()).toBe(StatusCodes.OK)
-});
+})
 
-test('get order with incorrect request (skip password) and should receive code 500 ', async ({ request }) => {
+test('get order with incorrect request (skip password) and should receive code 500 ', async ({
+  request,
+}) => {
   const requestParameters = {
     username: 'Aliia',
   }
@@ -23,18 +25,20 @@ test('get order with incorrect request (skip password) and should receive code 5
     params: requestParameters,
   })
   console.log('response headers:', response.headers())
-  console.log("response status:", response.status());
+  console.log('response status:', response.status())
   expect(response.status()).toBe(StatusCodes.INTERNAL_SERVER_ERROR)
-});
+})
 
-test('get order with correct request and wrong url should receive code 401 ', async ({ request }) => {
+test('get order with correct request and wrong url should receive code 401 ', async ({
+  request,
+}) => {
   const requestParameters = {
     username: 'Aliia',
-    password: '9876543210'
+    password: '9876543210',
   }
   const response = await request.get('https://backend.tallinn-learning.ee/test-lol-orders/', {
     params: requestParameters,
   })
-  console.log("response status:", response.status());
+  console.log('response status:', response.status())
   expect(response.status()).toBe(401)
 })
