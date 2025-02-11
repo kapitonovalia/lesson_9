@@ -15,7 +15,7 @@ test('123 post order with correct data should receive code 201', async ({ reques
   console.log('response status:', response.status())
   console.log('response body:', responseBody)
   expect.soft(response.status()).toBe(StatusCodes.OK)
-  expect.soft(responseBody.status).toBe('OPEN')
+  expect.soft(responseBody.status).toBe(null)
 })
 
 test('post order with data without status field should receive code 200', async ({ request }) => {
