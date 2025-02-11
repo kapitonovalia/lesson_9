@@ -1,5 +1,4 @@
 import { expect, test } from '@playwright/test'
-import { ok } from 'node:assert'
 import { StatusCodes } from 'http-status-codes'
 
 test('update order with correct request should receive code 200 ', async ({ request }) => {
