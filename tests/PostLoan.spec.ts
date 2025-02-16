@@ -45,7 +45,6 @@ test('2 Сorrect solution for the Very High Risk (valid request) ', async ({ req
 test('3 Сorrect solution for the Low Risk (valid request) ', async ({ request }) => {
   const generateLoanDtoLowRisk = (): LoanDTO => LoanDTO.generateLoanDtoLowRisk()
   const validRequest = generateLoanDtoLowRisk()
-  // Отправляем запрос
   const response = await request.post(
     `https://backend.tallinn-learning.ee/api/loan-calc/decision`,
     {
