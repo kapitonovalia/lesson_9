@@ -29,7 +29,7 @@ export class LoanDTO {
     return new LoanDTO(0, -1000, 15, false, 0, 0)
   }
   static generateLoanDtoWithoutIncome(): LoanDTO {
-    return new LoanDTO(null, 1000, 25, true, 5000, 12)
+    return new LoanDTO(0, 1000, 25, true, 5000, 12)
   }
   static generateLoanDtoNegativeDecision(): LoanDTO {
     return new LoanDTO(800, 1000, 25, true, 5000, 12)
